@@ -1,2 +1,7 @@
 <hello name="{{ name }}"></hello>
 <input [(ngModel)] ='userInput' type='text' (keyup)="keyUpPress()" />
+
+<ul  *ngFor="let service of servicecalls">
+
+   <li> {{service}}</li>
+</ul>

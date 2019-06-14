@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name = 'Angular';
 userInput;
+servicecalls =[];
 constructor(){}
-  fetchData(){
+  fetchData=()=>{
     console.log('Service called from UI');
+    this.servicecalls.push('Service called from UI');
   }
   betterFunction(execFunction,delay){
     let timer;
@@ -25,7 +27,7 @@ constructor(){}
       }
     
   }
-    betteFun = this.betterFunction(this.fetchData,5000);
+    betteFun = this.betterFunction(this.fetchData,3000);
   keyUpPress(){
     this.betteFun();
   }
