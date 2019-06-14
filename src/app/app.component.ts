@@ -12,7 +12,7 @@ servicecalls =[];
 constructor(){}
   fetchData=()=>{
     console.log('Service called from UI');
-    this.servicecalls.push('Service called from UI');
+    this.servicecalls.push('Service called from UI ---> '+this.userInput);
   }
   betterFunction(execFunction,delay){
     let timer;
@@ -21,8 +21,11 @@ constructor(){}
       if(timer){
         clearTimeout(timer);
       }
-       timer = setTimeout(function(){
-        execFunction();
+       timer = setTimeout(()=>{
+         if(this.userInput){
+           execFunction();
+         }
+        
         },delay);
       }
     
