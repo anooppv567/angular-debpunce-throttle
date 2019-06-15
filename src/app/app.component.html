@@ -5,3 +5,12 @@
 
    <li> {{service}}</li>
 </ul>
+
+<div>
+  <h1> Hello Throttle</h1>
+<input [(ngModel)] ='throttleInput' type='text' (keyup)="keyUpPressForThrottle()" />
+<ul  *ngFor="let service of throttleServiceCalls">
+
+   <li> {{service}}</li>
+</ul>
+</div>
